@@ -1,0 +1,29 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header sticky (not fixed!) */
+app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Main content takes remaining space */
+.app-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Footer stays at bottom */
+app-footer {
+  margin-top: auto;
+}

@@ -1,0 +1,11 @@
+.toast {
+  border-radius: 10px;
+}
+
+.btn-close {
+  opacity: 0.8;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}

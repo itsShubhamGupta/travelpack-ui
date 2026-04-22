@@ -1,0 +1,97 @@
+<div class="container mt-5">
+  <div class="card shadow p-4">
+    <h3 class="text-center mb-4"> Add Travel Package</h3>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <!-- Title -->
+      <div class="mb-3">
+        <label class="form-label">Package Title</label>
+        <input class="form-control" formControlName="title">
+        <div class="text-danger" *ngIf="form.get('title')?.touched && form.get('title')?.invalid">
+          Title is required (min 3 chars)
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="mb-3">
+        <label class="form-label">Location</label>
+        <input class="form-control" formControlName="location">
+        <div class="text-danger" *ngIf="form.get('location')?.touched">
+          Location is required
+        </div>
+      </div>
+
+      <!-- Price + Duration -->
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Price</label>
+          <input type="number" class="form-control" formControlName="price">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Duration (Days)</label>
+          <input type="number" class="form-control" formControlName="duration">
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea class="form-control" rows="3" formControlName="description"></textarea>
+      </div>
+
+      <!-- Slots -->
+      <div class="mb-3">
+        <label class="form-label">Available Slots</label>
+        <input type="number" class="form-control" formControlName="availableSlots">
+      </div>
+
+      <!-- File -->
+      <div class="mb-3">
+        <label class="form-label">Upload Image</label>
+        <input type="file" class="form-control" (change)="onFileChange($event)">
+      </div>
+
+      <!-- 🔥 ITINERARY -->
+      <h5 class="mt-4">📅 Itinerary</h5>
+
+      <div formArrayName="itineraries">
+        <div *ngFor="let it of itineraries.controls; let i = index"
+             [formGroupName]="i"
+             class="border rounded p-3 mb-3 bg-light">
+
+          <label class="fw-bold">Day {{ i + 1 }}</label>
+
+          <input class="form-control mb-2"
+                 formControlName="details"
+                 placeholder="Enter details for the day">
+
+          <div class="text-danger"
+               *ngIf="it.get('details')?.touched && it.get('details')?.invalid">
+            Details required
+          </div>
+
+          <button type="button"
+                  class="btn btn-danger btn-sm mt-2"
+                  (click)="removeItinerary(i)"
+                  [disabled]="i === 0">
+            Remove
+          </button>
+        </div>
+      </div>
+
+      <button type="button"
+              class="btn btn-outline-primary mb-3"
+              (click)="addItinerary()">
+        ➕ Add Another Day
+      </button>
+
+      <!-- Submit -->
+      <button class="btn btn-success w-100" [disabled]="form.invalid">
+         Submit Package
+      </button>
+
+    </form>
+  </div>
+</div>

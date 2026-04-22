@@ -1,0 +1,23 @@
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
+
+  <div *ngFor="let t of messages"
+       class="toast show mb-2 text-white border-0 shadow position-relative"
+       [ngClass]="{
+         'bg-success': t.type === 'success',
+         'bg-danger': t.type === 'error',
+         'bg-info': t.type === 'info'
+       }">
+
+    <!-- Close button (top-right corner) -->
+    <button class="btn-close btn-close-white position-absolute top-0 end-0 m-2"
+            (click)="messages.splice(messages.indexOf(t),1)">
+    </button>
+
+    <!-- Message -->
+    <div class="toast-body pe-4">
+      {{ t.text }}
+    </div>
+
+  </div>
+
+</div>
