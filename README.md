@@ -1,59 +1,89 @@
-# TravelpackUi
+# 🌍 TravelPack UI – Smart Travel Booking Experience
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+🚀 A modern Angular-based UI for a full-stack Tour Package Management System.
 
-## Development server
+## 🌐 Live Demo
+🔗 https://travelpack-in.netlify.app/
 
-To start a local development server, run:
+⚡ Fully deployed with JWT authentication, booking workflow, and role-based access
+
+---
+
+## ✨ Live Experience
+
+> A seamless platform where users can explore destinations, view itineraries, and book trips instantly.
+
+---
+
+## 🔥 Key Features
+
+🎯 User Features:
+- 🔐 Secure Login & Registration (JWT-based)
+- 🌍 Browse travel packages with images
+- 🔎 Filter by location & price
+- 📄 View detailed itinerary (day-wise plan)
+- 📘 Book packages instantly
+- 📊 View booking history
+
+🧑‍💼 Admin Features:
+- 📦 Add / Update / Delete packages
+- 🖼 Upload images for packages
+- 📅 Manage itinerary
+- 📋 View all bookings
+
+---
+
+## 🛠 Tech Stack
+
+- Angular
+- TypeScript
+- Bootstrap / CSS
+- REST API Integration
+
+---
+
+## 🎥 Demo Flow (Recommended)
+
+1. Login as User  
+2. Browse Packages  
+3. View Details  
+4. Book Package  
+5. Check Booking History  
+6. Login as Admin  
+7. Add New Package  
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Package Listing
+<img width="1917" height="947" alt="image" src="https://github.com/user-attachments/assets/b8674aa8-1b2f-4620-b7bf-31f40ccfd056" />
+
+
+### 📄 Package Details
+<img width="1902" height="968" alt="image" src="https://github.com/user-attachments/assets/6d09aac1-ed62-42ef-bd4b-351dd6b9fa72" />
+
+
+
+### 📘 Booking Page
+<img width="1887" height="907" alt="image" src="https://github.com/user-attachments/assets/a0c07642-47f6-412d-8169-ccda21886bc5" />
+
+
+### 🧑‍💼 Admin Dashboard
+<img width="1897" height="966" alt="image" src="https://github.com/user-attachments/assets/1f2eeb09-7023-4640-abfc-dc4cdabbd86b" />
+
+
+---
+
+## 🔗 Backend Repository
+👉 https://github.com/itsShubhamGupta/travelpack-backend/tree/master
+
+---
+
+## ⚙️ Setup Instructions
 
 ```bash
+git clone <repo-url>
+cd travelpack-ui
+npm install
 ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
