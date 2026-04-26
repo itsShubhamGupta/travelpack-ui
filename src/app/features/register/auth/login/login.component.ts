@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../../core/service/auth.service';
 import { CommonModule } from '@angular/common';
 import { NotificationService } from '../../../../core/service/notification.service';
@@ -8,7 +8,7 @@ import { NotificationService } from '../../../../core/service/notification.servi
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule],
+  imports: [ReactiveFormsModule,CommonModule,RouterLink],
   templateUrl: './login.component.html'
 })
 export class LoginComponent {
